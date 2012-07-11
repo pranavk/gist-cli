@@ -1,5 +1,5 @@
 # Gist-From-CommandLine
-This is a simple **python** script that can make you post gists from the command line.
+This is a simple **python** script that can make you post gists from the command line. I have only tested the script on linux systems. Probably it should work under windows also but in that case you may have to do slight modifications like changing the '\n' used in the script with '\r\n' since windows terminal end the input with a carriage return and a newline character ( I am not sure about it)
 
 # Requirements 
 Only requirement is that you should have python 2.7 installed on your system. (Though slight modification should make it run on python3 too.)
