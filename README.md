@@ -28,7 +28,7 @@ or you can also use pipelines with this as :
 You can also use the terminal standard input to post that entered data as a gist. In that case, to stop reading data from the terminal just enter "."(quotes for clarity) in the last line of your input. (Don't worry that "." won't be included in your gist.)
 
 ## Problems that you might face
-Presently I have assumed that your python interpreter has the path `/usr/bin/python`. If your distribution has any other path then you just need to change the first line of the script to the path of the interpreter.
+Presently I have assumed that your python interpreter is in the path `/usr/bin/python`. If your distribution has any other path then you just need to change the first line of the script to the path of the interpreter.
 
 # Scope
 - Currently only anonymous gists are posted to github via this tool. The script needs to be extended for adding authentication for user based gists.
