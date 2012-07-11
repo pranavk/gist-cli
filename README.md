@@ -5,7 +5,7 @@ This is a simple **python** script that can make you post gists from the command
 Only requirement is that you should have python 2.7 installed on your system. (Though slight modification should make it run on python3 too.)
 
 # Usage
-Make the script executable (as `chmod +x gistcli`) and add the script to your PATH variable. Now you should be able to use gistcli command directly from your terminal. 
+Make the script executable (as `chmod +x gistcli`) and add the script to your PATH variable or you can create a symlink to your script in your PATH directory. Now you should be able to use gistcli command directly from your terminal. 
 
 For more information you can see the inbuilt help of gistcli (gistcli -h).
 
