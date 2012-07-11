@@ -16,6 +16,11 @@ Assume that filename is `harry.txt`.
 #### Minimalistic Usage
 - `gistcli -f harry.txt`  # Returns a link of the **public** gist with **description** `Gist - Paste`.
 
+or you can also use pipelines with this as :
+- `cat harry.txt | gistcli` # Takes data from the pipeline.
+
+**Note :** You should'nt use the '-f' flag with gistcli when using the pipeline, but even if you do, the preference is given to the data taken from the file mentioned, not the pipeline.
+
 
 - `gistcli -f harry.txt -d 'Python multithreading example.'` # Returns a link of the **public** gist with **description** `Python multithreading example.`
 - `gistcli -f harry.txt -d 'Python multithreading example.' -p` # Returns a **private** gist like above.
@@ -25,5 +30,5 @@ Presently I have assumed that your python interpreter has the path `/usr/bin/pyt
 
 # Scope
 - Currently only anonymous gists are posted to github via this tool. The script needs to be extended for adding authentication for user based gists.
-- Currently pipelines are not supported, the gist is taken from the file. Support may be added to take input from pipelines also.
+
 

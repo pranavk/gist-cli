@@ -11,24 +11,24 @@ from optparse import OptionParser
 parser=OptionParser()
 
 parser.add_option("-p","--private",dest="privacyPub",action="store_false",default="true",help="(Optional) Defaults to True i.e if not specified, gist will be marked as public. If flag '-p' is specified, gist will be marked as private.")
-parser.add_option("-f","--file",dest="filename",help="Takes data from the input file.")
+parser.add_option("-f","--file",dest="filename",help="Takes data from the input file. Not needed in case pipeline is used.")
 parser.add_option("-d","--desc",dest="desc",default="Gist - Paste",help="(Optional) Add description to the gist.")
 
 
 (options,args)=parser.parse_args()
 
-
-#TODO: Currently pipelines are not supported, data should be fetched from files only.
-if options.filename==None:
-	parser.error("Filename is compulsory in this version of gist-CLI")
-
-#Defining simple variables to be used in rest of the script. :
 filename=options.filename
 desc=options.desc
 privacyPub=options.privacyPub
 
-
-fileData=open(filename).read()
+#TODO: Currently pipelines are not supported, data should be fetched from files only.
+if filename==None:
+	if not sys.stdin.isatty():
+		fileData=sys.stdin.read()
+	else:
+		parser.error("Filename is compulsory in this version of gist-CLI")
+else:
+	fileData=open(filename).read()
 
 #Making JSON wrapper for the content to be sent.
 jsonObj={"description": desc,"public": privacyPub,"files": {"file1.txt": {"content": fileData}}}
