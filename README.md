@@ -23,4 +23,7 @@ Assume that filename is `harry.txt`.
 ## Problems that you might face
 Presently I have assumed that your python interpreter has the path `/usr/bin/python`. If your distribution has any other path then you just need to change the first line of the script to the path of the interpreter.
 
+# Scope
+- Currently only anonymous gists are posted to github via this tool. The script needs to be extended for adding authentication for user based gists.
+- Currently pipelines are not supported, the gist is taken from the file. Support may be added to take input from pipelines also.
 
