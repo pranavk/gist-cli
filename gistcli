@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python2
 
 #########################################################################################	
 #				gistcli - version 1.1					#
@@ -48,7 +48,7 @@ else:
 
 
 #Making JSON wrapper for the content to be sent.
-jsonObj={"description": desc,"public": privacyPub,"files": {"file1.txt": {"content": fileData}}}
+jsonObj={"description": desc,"public": privacyPub,"files": {filename or "file1.txt": {"content": fileData}}}
 jsonObj=json.dumps(jsonObj)
 
 #TODO: Only anonymous gists are supported till now. Support will be extended to user gists after adding authentication.
